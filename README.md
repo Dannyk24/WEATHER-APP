@@ -7,6 +7,15 @@ https://dannyk24.github.io/WEATHER-APP/
 
 ## Features
 
+### Automatic Location Weather Detection
+
+* Requests the user's geolocation permission when the application loads.
+* Automatically retrieves weather data for the user's current location.
+* Provides immediate weather information without requiring a manual city search.
+* Uses the browser Geolocation API together with the weather API to deliver location-based weather updates.
+* Enhances user experience by displaying relevant weather information as soon as the application opens.
+
+
 ### Live Weather Data
 
 * Search for weather information by city name
