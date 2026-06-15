@@ -1,0 +1,29 @@
+/*WEATHER ICON GLOBAL STYLES*/
+
+.weather-icon {
+    border: 1px solid rgb(97, 95, 95);
+}
+
+.clouds-weather-icon {
+    color: #0072c3;
+}
+
+.sunny-weather-icon {
+    color: #ffd700;
+}
+
+.clear-weather-icon {
+    color: #5c6bc0;
+}
+
+.rain-weather-icon {
+    color: #455a64;
+}
+
+.snow-weather-icon {
+    color: #81d4fa;
+}
+
+.thunder-weather-icon {
+    color: #ffd600;
+}

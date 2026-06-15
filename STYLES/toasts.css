@@ -1,0 +1,79 @@
+/*TOAST MESSAGES STYLES*/
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* BASE TOAST */
+.toast {
+    width: 220px;
+    padding: 14px 16px;
+    border-radius: 12px;
+
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    /* modern glass feel */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    background: rgba(30, 30, 30, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    /* hidden state */
+    transform: translateX(120%);
+    opacity: 0;
+
+    transition: all 0.3s ease-in-out;
+}
+
+/* ACTIVE STATE */
+.toast.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* HEADER */
+.toast-header {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+/* MESSAGE */
+.toast-message {
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: #f1f1f1;
+}
+
+/* TYPE STYLES (clean accent bar effect) */
+.toast.success {
+    border-left: 4px solid #2ecc71;
+}
+
+.toast.warning {
+    border-left: 4px solid #f1c40f;
+}
+
+.toast.error {
+    border-left: 4px solid #e74c3c;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="STYLES/styles.css">
+    <link rel="stylesheet" href="ASSETS/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="STYLES/toasts.css">
+    <link rel="stylesheet" href="STYLES/weather_icons.css">
+    <link rel="stylesheet" href="STYLES/cta.css">
+    <link rel="stylesheet" href="STYLES/loader.css">
+</head>
+
+<body>
+    <div id="loader" class="loader-overlay hidden">
+        <div class="spinner"></div>
+    </div>
+    <header>
+        <div class="left">
+            <h1 class="hello-message">
+                Hello, Skyglasser
+            </h1>
+            <p>Here's whats happening in <span class="current-user-city">London</span> today</p>
+        </div>
+        <div class="right">
+            <div class="weather-search-bar-container">
+                <i class="fas fa-search"></i>
+                <input type="search" name="" id="" placeholder="Search city name" required class="main-search-bar">
+                <button class="cta primary-cta get-weather-cta">Get Weather</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="dashboard-card main-card">
+            <div class="top">
+                <div class="left">
+                    <p class="current-city-name">London, GB</p>
+                    <span class="current-date"><i class="fas fa-calendar"></i>monday 24,july</span>
+                </div>
+                <div class="right">
+                    <div class="live-data-container">
+                        <div class="green-circle"></div>
+                        <span>live data</span>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="left">
+                    <div class="current-city-temperature">0°</div>
+                    <div class="line"></div>
+                    <div class="current-city-temperature-info">
+                        <span class="temperature-description">Clear</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="current-weather-icon ">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="weather-conditon-cards">
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+                        <div class="weather-description">humidity</div>
+                        <div class="weather-value current-humidity-value">0%</div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="weather-description">wind</div>
+                        <div class="weather-value current-wind-value">0km/h</div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="weather-description">visibility</div>
+                        <div class="weather-value current-visibility-value">0km</div>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div class="weather-description">pressure</div>
+                        <div class="weather-value current-pressure-value">0hPa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-card sub-card">
+            <div class="top">
+                <p>History Data</p>
+            </div>
+            <div class="available-cites-container">
+                <!--renderWeatherHistory()-->
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container">
+        <div id="toast" class="toast">
+            <div class="toast-header"></div>
+            <div class="toast-message"></div>
+        </div>
+    </div>
+
+
+
+    <script src="SCRIPTS/app.js" type="module"></script>
+</body>
+
+</html>
