@@ -1,4 +1,10 @@
-import { notify, showLoader, hideLoader } from "./component.js";
+import {
+  notify,
+  showLoader,
+  hideLoader,
+  showLiveDataFlag,
+  hideLiveDataFlag,
+} from "./component.js";
 import { formatString } from "./UTILS/format.js";
 import {
   fetchWeatherData,
@@ -34,6 +40,7 @@ async function getWeather(city) {
     addToWeatherHistory(weatherData);
     renderWeatherHistory();
     renderCurrentCityWeather(weatherData);
+    showLiveDataFlag();
     notify("success", "Weather data fetched");
   } catch (error) {
     if (error.status === 404) {
@@ -52,6 +59,7 @@ async function getUserCityWeatherData() {
     showLoader();
     const weatherData = await fetchUserCityWeather(geolocation);
     renderCurrentCityWeather(weatherData);
+    showLiveDataFlag();
     notify("success", "Weather data fetched");
   } catch (error) {
     if (error.status === 404) {
@@ -83,5 +91,6 @@ weatherHistoryContainer.addEventListener("click", (e) => {
     return;
   }
   renderCurrentCityWeather(weatherData);
+  hideLiveDataFlag();
   notify("success", "History data fetched");
 });

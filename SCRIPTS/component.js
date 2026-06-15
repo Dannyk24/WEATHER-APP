@@ -31,3 +31,13 @@ export function showLoader() {
 export function hideLoader() {
   loader.classList.add("hidden");
 }
+
+const liveDataFlag = document.querySelector(".live-data-container");
+
+export function showLiveDataFlag() {
+  liveDataFlag.style.display = "flex";
+}
+
+export function hideLiveDataFlag() {
+  liveDataFlag.style.display = "none";
+}
