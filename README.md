@@ -53,14 +53,15 @@ https://dannyk24.github.io/WEATHER-APP/
 
 ## Concepts Practiced
 
-* API Integration
-* Asynchronous JavaScript
-* Fetch API
-* DOM Manipulation
-* Event Handling
-* Local Storage
-* Data Caching
-* Responsive Web Design
+- Geolocation API
+- API Integration
+- Asynchronous JavaScript
+- Fetch API
+- Local Storage
+- Data Caching
+- DOM Manipulation
+- Event Handling
+- Responsive Web Design
 
 ## How It Works
 
